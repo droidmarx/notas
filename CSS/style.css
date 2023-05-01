@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+:root {
+  --Branco: #ffffff;
+  --Cinza-Claro: #959eac;
+  --Cinza-Medio: #7c8798;
+  --Cinza-Escuro: #393f46;
+  --Azul-Escuro: #252d37;
+  --Azul-Muito-Escuro: #121417;
+  --Laranja: #fb7413;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--Azul-Muito-Escuro);
+}
+
+h1 {
+  letter-spacing: 2px;
+  color: var(--Branco);
+}
+
+p {
+  font-size: 15px;
+  color: var(--Cinza-Claro);
+  letter-spacing: 1px;
+}
+
+.icon {
+  background-color: var(--Cinza-Escuro);
+  padding: 15px;
+  border-radius: 50%;
+}
+
+main {
+  min-width: 375px;
+  padding: 20px;
+  width: 375px;
+  background-color: var(--Azul-Escuro);
+  border-radius: 25px;
+  height: 410px;
+}
+
+.container {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nota {
+  height: 40px;
+  width: 40px;
+  border-radius: 90%;
+  align-items: center;
+}
+
+.container a {
+  background-color: var(--Cinza-Escuro);
+  color: var(--Cinza-Medio);
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  display: grid;
+}
+
+.nota.selecionada,
+.container a:hover {
+  color: var(--Branco);
+  background-color: var(--Laranja);
+  transition: 0.6s ease;
+}
+
+.voltar,
+.enviar {
+  margin-top: 40px;
+  color: var(--Laranja);
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  padding: 15px;
+  width: 100%;
+  letter-spacing: 4px;
+  transition: 0.3s ease;
+}
+
+.voltar,
+.enviar:hover {
+  background-color: var(--Laranja);
+  color: var(--Branco);
+  transition: 0.5s ease;
+}
+
+#Obrigado {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+}
+
+span {
+  color: var(--Laranja);
+}
+.obrigado {
+  margin: 0 auto;
+}
+
+.notaObrigado {
+  color: var(--Cinza-Escuro);
+  background-color: var(--Branco);
+  padding: 20px;
+  border-radius: 20px;
+}
