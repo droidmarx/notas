@@ -41,12 +41,14 @@ p {
 }
 
 main {
+  display: grid;
   min-width: 375px;
   padding: 20px;
   width: 375px;
   background-color: var(--Azul-Escuro);
   border-radius: 25px;
   height: 410px;
+  overflow: hidden;
 }
 
 .container {
@@ -61,6 +63,7 @@ main {
   width: 40px;
   border-radius: 90%;
   align-items: center;
+  padding: 5px;
 }
 
 .container a {
@@ -70,6 +73,7 @@ main {
   border: none;
   text-align: center;
   display: grid;
+  transition: 0.2s ease;
 }
 
 .nota.selecionada,
@@ -82,7 +86,8 @@ main {
 .voltar,
 .enviar {
   margin-top: 40px;
-  color: var(--Laranja);
+  color: var(--Branco);
+  background-color: var(--Laranja);
   font-weight: 700;
   text-transform: uppercase;
   border: none;
@@ -96,8 +101,8 @@ main {
 
 .voltar,
 .enviar:hover {
-  background-color: var(--Laranja);
-  color: var(--Branco);
+  background-color: var(--Branco);
+  color: var(--Laranja);
   transition: 0.5s ease;
 }
 
@@ -119,4 +124,31 @@ span {
   background-color: var(--Branco);
   padding: 20px;
   border-radius: 20px;
+}
+
+.selecionar {
+  display: block;
+  opacity: 0;
+  color: var(--Cinza-Medio);
+  text-align: center;
+  transition: 1s ease;
+}
+
+@keyframes piscar {
+  0% {
+    opacity: 1;
+    color: #fb7413;
+  }
+  50% {
+    
+    opacity: 0;
+  }
+  100% {
+    color: #fb7413;
+    opacity: 1;
+  }
+}
+
+.icon {
+  transform: rotate(100);
 }

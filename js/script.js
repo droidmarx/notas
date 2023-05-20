@@ -30,3 +30,31 @@ for (let nota of notas) {
     nota.classList.add("selecionada");
   });
 }
+
+document.querySelector('.enviar').addEventListener('click', function() {
+  var notas = document.querySelectorAll('.nota');
+  var notaSelecionada = false;
+
+  for (var i = 0; i < notas.length; i++) {
+    if (notas[i].classList.contains('selecionada')) {
+      notaSelecionada = true;
+      break;
+    }
+  }
+
+  if (!notaSelecionada) {
+    var selecionarElement = document.querySelector('.selecionar');
+    selecionarElement.style.opacity = '1';
+    selecionarElement.style.margin = '5px';
+    selecionarElement.style.animation = 'piscar 2s infinite';
+  }
+
+  if (!notaSelecionada) {
+    var selecionarElement = document.querySelector('.icon');
+    selecionarElement.style.transform = 'rotate(360deg)';
+    selecionarElement.style.transition = '1s all';
+  }
+});
+
+
+
